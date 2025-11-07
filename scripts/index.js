@@ -36,9 +36,10 @@ fetch(url, {
           <p class="card-text text-muted">${product.brand}</p>
           <p class="card-text small">${product.description}</p>
           <p class="card-text fw-bold">€${product.price}</p>
-          <div class="mt-auto d-flex justify-content-between">
-            <a href="backoffice.html?id=${product._id}" class="btn btn-primary btn-sm">Modifica</a>
-           <button class="btn btn-danger btn-sm" onclick="deleteProduct('${product._id}')">Elimina</button>
+          <div class="mt-auto d-flex justify-content-center gap-3 ">
+            <a href="backoffice.html?id=${product._id}" class="btn btn-warning btn-sm">Modifica</a>
+            <a href="details.html?id=${product._id}" class="btn btn-primary btn-sm">Dettagli</a>
+           <button class="btn btn-danger btn-sm" onclick="deleteProduct('${product._id}')">X</button>
           </div>
         </div>
       </div>
