@@ -22,7 +22,7 @@ if (productId) {
     })
     .then((product) => {
       container.innerHTML = `
-  <div class="d-flex justify-content-center mt-5">
+  <div class="d-flex justify-content-center my-5">
     <div class="card shadow-sm border-0" style="width: 24rem;">
       <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
       <div class="card-body text-center">

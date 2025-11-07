@@ -38,7 +38,7 @@ fetch(url, {
 
         col.innerHTML = `
       <div class="card h-100 shadow-sm">
-        <img src="${product.imageUrl}" class="card-img-top" alt="${product.name}">
+        <img src="${product.imageUrl}" class="card-img-top h-100" alt="${product.name}">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${product.name}</h5>
           <p class="card-text text-muted">${product.brand}</p>

@@ -1,5 +1,12 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+footer {
+  background-color: #212529; /* o il colore che vuoi */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -13,6 +20,72 @@ body {
 
 .card:hover {
   transform: translateY(-10px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  animation: fadeInUp 0.9s ease-in-out;
+}
+
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.hero {
+  animation: fadeInHero 1.2s ease-out;
+  width: 100%;
+  height: 60vh;
+  background-image: url("https://cdn.corrieredellosport.it/img/1238/619/2024/01/25/123150309-6ef2e140-24b4-48e3-93f7-e19c67922277.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.hero .hero-content {
+  max-width: 700px;
+  animation: fadeInUp 0.9s ease-in-out;
+}
+.hero h1, .hero .h1 {
+  font-size: 3rem;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+.hero .btn-primary {
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 0.6rem 1.8rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+.hero .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /*!
@@ -50,7 +123,7 @@ body {
   --bs-success: #00b4d8;
   --bs-info: #0dcaf0;
   --bs-warning: #ffd166;
-  --bs-danger: #ef476f;
+  --bs-danger: #f10139;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 0, 119, 182;
@@ -58,7 +131,7 @@ body {
   --bs-success-rgb: 0, 180, 216;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 209, 102;
-  --bs-danger-rgb: 239, 71, 111;
+  --bs-danger-rgb: 241, 1, 57;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
   --bs-primary-text-emphasis: rgb(0, 47.6, 72.8);
@@ -66,7 +139,7 @@ body {
   --bs-success-text-emphasis: rgb(0, 72, 86.4);
   --bs-info-text-emphasis: rgb(5.2, 80.8, 96);
   --bs-warning-text-emphasis: rgb(102, 83.6, 40.8);
-  --bs-danger-text-emphasis: rgb(95.6, 28.4, 44.4);
+  --bs-danger-text-emphasis: rgb(96.4, 0.4, 22.8);
   --bs-light-text-emphasis: #495057;
   --bs-dark-text-emphasis: #495057;
   --bs-primary-bg-subtle: rgb(204, 227.8, 240.4);
@@ -74,7 +147,7 @@ body {
   --bs-success-bg-subtle: rgb(204, 240, 247.2);
   --bs-info-bg-subtle: rgb(206.6, 244.4, 252);
   --bs-warning-bg-subtle: rgb(255, 245.8, 224.4);
-  --bs-danger-bg-subtle: rgb(251.8, 218.2, 226.2);
+  --bs-danger-bg-subtle: rgb(252.2, 204.2, 215.4);
   --bs-light-bg-subtle: rgb(251.5, 252, 252.5);
   --bs-dark-bg-subtle: #ced4da;
   --bs-primary-border-subtle: rgb(153, 200.6, 225.8);
@@ -82,7 +155,7 @@ body {
   --bs-success-border-subtle: rgb(153, 225, 239.4);
   --bs-info-border-subtle: rgb(158.2, 233.8, 249);
   --bs-warning-border-subtle: rgb(255, 236.6, 193.8);
-  --bs-danger-border-subtle: rgb(248.6, 181.4, 197.4);
+  --bs-danger-border-subtle: rgb(249.4, 153.4, 175.8);
   --bs-light-border-subtle: #e9ecef;
   --bs-dark-border-subtle: #adb5bd;
   --bs-white-rgb: 255, 255, 255;
@@ -137,8 +210,8 @@ body {
   --bs-focus-ring-color: rgba(0, 119, 182, 0.25);
   --bs-form-valid-color: #00b4d8;
   --bs-form-valid-border-color: #00b4d8;
-  --bs-form-invalid-color: #ef476f;
-  --bs-form-invalid-border-color: #ef476f;
+  --bs-form-invalid-color: #f10139;
+  --bs-form-invalid-border-color: #f10139;
 }
 
 [data-bs-theme=dark] {
@@ -162,7 +235,7 @@ body {
   --bs-success-text-emphasis: rgb(102, 210, 231.6);
   --bs-info-text-emphasis: rgb(109.8, 223.2, 246);
   --bs-warning-text-emphasis: rgb(255, 227.4, 163.2);
-  --bs-danger-text-emphasis: rgb(245.4, 144.6, 168.6);
+  --bs-danger-text-emphasis: rgb(246.6, 102.6, 136.2);
   --bs-light-text-emphasis: #f8f9fa;
   --bs-dark-text-emphasis: #dee2e6;
   --bs-primary-bg-subtle: rgb(0, 23.8, 36.4);
@@ -170,7 +243,7 @@ body {
   --bs-success-bg-subtle: rgb(0, 36, 43.2);
   --bs-info-bg-subtle: rgb(2.6, 40.4, 48);
   --bs-warning-bg-subtle: rgb(51, 41.8, 20.4);
-  --bs-danger-bg-subtle: rgb(47.8, 14.2, 22.2);
+  --bs-danger-bg-subtle: rgb(48.2, 0.2, 11.4);
   --bs-light-bg-subtle: #343a40;
   --bs-dark-bg-subtle: #1a1d20;
   --bs-primary-border-subtle: rgb(0, 71.4, 109.2);
@@ -178,7 +251,7 @@ body {
   --bs-success-border-subtle: rgb(0, 108, 129.6);
   --bs-info-border-subtle: rgb(7.8, 121.2, 144);
   --bs-warning-border-subtle: rgb(153, 125.4, 61.2);
-  --bs-danger-border-subtle: rgb(143.4, 42.6, 66.6);
+  --bs-danger-border-subtle: rgb(144.6, 0.6, 34.2);
   --bs-light-border-subtle: #495057;
   --bs-dark-border-subtle: #343a40;
   --bs-heading-color: inherit;
@@ -2022,13 +2095,13 @@ progress {
 
 .table-danger {
   --bs-table-color: #000;
-  --bs-table-bg: rgb(251.8, 218.2, 226.2);
-  --bs-table-border-color: rgb(201.44, 174.56, 180.96);
-  --bs-table-striped-bg: rgb(239.21, 207.29, 214.89);
+  --bs-table-bg: rgb(252.2, 204.2, 215.4);
+  --bs-table-border-color: rgb(201.76, 163.36, 172.32);
+  --bs-table-striped-bg: rgb(239.59, 193.99, 204.63);
   --bs-table-striped-color: #000;
-  --bs-table-active-bg: rgb(226.62, 196.38, 203.58);
+  --bs-table-active-bg: rgb(226.98, 183.78, 193.86);
   --bs-table-active-color: #000;
-  --bs-table-hover-bg: rgb(232.915, 201.835, 209.235);
+  --bs-table-hover-bg: rgb(233.285, 188.885, 199.245);
   --bs-table-hover-color: #000;
   color: var(--bs-table-color);
   border-color: var(--bs-table-border-color);
@@ -2887,7 +2960,7 @@ textarea.form-control-lg {
 .was-validated .form-control:invalid, .form-control.is-invalid {
   border-color: var(--bs-form-invalid-border-color);
   padding-right: calc(1.5em + 0.75rem);
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ef476f'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ef476f' stroke='none'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23f10139'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23f10139' stroke='none'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -2906,7 +2979,7 @@ textarea.form-control-lg {
   border-color: var(--bs-form-invalid-border-color);
 }
 .was-validated .form-select:invalid:not([multiple]):not([size]), .was-validated .form-select:invalid:not([multiple])[size="1"], .form-select.is-invalid:not([multiple]):not([size]), .form-select.is-invalid:not([multiple])[size="1"] {
-  --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ef476f'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ef476f' stroke='none'/%3e%3c/svg%3e");
+  --bs-form-select-bg-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23f10139'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23f10139' stroke='none'/%3e%3c/svg%3e");
   padding-right: 4.125rem;
   background-position: right 0.75rem center, center right 2.25rem;
   background-size: 16px 12px, calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
@@ -3113,19 +3186,19 @@ textarea.form-control-lg {
 
 .btn-danger {
   --bs-btn-color: #000;
-  --bs-btn-bg: #ef476f;
-  --bs-btn-border-color: #ef476f;
+  --bs-btn-bg: #f10139;
+  --bs-btn-border-color: #f10139;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(241.4, 98.6, 132.6);
-  --bs-btn-hover-border-color: rgb(240.6, 89.4, 125.4);
-  --bs-btn-focus-shadow-rgb: 203, 60, 94;
+  --bs-btn-hover-bg: rgb(243.1, 39.1, 86.7);
+  --bs-btn-hover-border-color: rgb(242.4, 26.4, 76.8);
+  --bs-btn-focus-shadow-rgb: 205, 1, 48;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(242.2, 107.8, 139.8);
-  --bs-btn-active-border-color: rgb(240.6, 89.4, 125.4);
+  --bs-btn-active-bg: rgb(243.8, 51.8, 96.6);
+  --bs-btn-active-border-color: rgb(242.4, 26.4, 76.8);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #ef476f;
-  --bs-btn-disabled-border-color: #ef476f;
+  --bs-btn-disabled-bg: #f10139;
+  --bs-btn-disabled-border-color: #f10139;
 }
 
 .btn-light {
@@ -3248,19 +3321,19 @@ textarea.form-control-lg {
 }
 
 .btn-outline-danger {
-  --bs-btn-color: #ef476f;
-  --bs-btn-border-color: #ef476f;
+  --bs-btn-color: #f10139;
+  --bs-btn-border-color: #f10139;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ef476f;
-  --bs-btn-hover-border-color: #ef476f;
-  --bs-btn-focus-shadow-rgb: 239, 71, 111;
+  --bs-btn-hover-bg: #f10139;
+  --bs-btn-hover-border-color: #f10139;
+  --bs-btn-focus-shadow-rgb: 241, 1, 57;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ef476f;
-  --bs-btn-active-border-color: #ef476f;
+  --bs-btn-active-bg: #f10139;
+  --bs-btn-active-border-color: #f10139;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ef476f;
+  --bs-btn-disabled-color: #f10139;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ef476f;
+  --bs-btn-disabled-border-color: #f10139;
   --bs-gradient: none;
 }
 
@@ -6911,8 +6984,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-danger-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-danger:hover, .link-danger:focus {
-  color: RGBA(242, 108, 140, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(242, 108, 140, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(244, 52, 97, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(244, 52, 97, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-light {
