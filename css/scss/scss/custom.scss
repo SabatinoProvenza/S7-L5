@@ -1,0 +1,27 @@
+// Import del font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+// Personalizzazione variabili Bootstrap
+$primary: #0077b6;
+$secondary: #adb5bd;
+$success: #00b4d8;
+$warning: #ffd166;
+$danger: #ef476f;
+$font-family-sans-serif: "Poppins", sans-serif;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+.card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+// Import di tutto Bootstrap
+@import "./bootstrap.scss";
