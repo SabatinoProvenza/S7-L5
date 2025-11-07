@@ -4,6 +4,11 @@ const token =
 
 const container = document.getElementById("productsContainer")
 
+const spinner = document.getElementById("loadingSpinner")
+
+// Mostra lo spinner
+spinner.style.display = "inline-block"
+
 // Funzione per recuperare i prodotti
 fetch(url, {
   headers: {
@@ -20,6 +25,9 @@ fetch(url, {
     }
   })
   .then((data) => {
+    // Nascondo lo spinner quando arrivano i dati
+    spinner.style.display = "none"
+
     // Funzione per creare le card
     const showProducts = function (products) {
       container.innerHTML = "" // pulisce il container
